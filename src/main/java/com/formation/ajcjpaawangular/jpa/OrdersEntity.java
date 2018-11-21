@@ -3,6 +3,8 @@ package com.formation.ajcjpaawangular.jpa;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Data
@@ -20,6 +22,9 @@ public class OrdersEntity {
 	@ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
 	@JoinColumn(name = "order_idUser")
 	private UserEntity user;
+	
+    @OneToMany(mappedBy="order")
+    private List<OrderRowEntity> orderRowEntityList;
 
 	public OrdersEntity() {
 
