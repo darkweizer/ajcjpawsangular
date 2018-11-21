@@ -15,6 +15,7 @@ public class NewsEntity {
     private Integer id;
     private String title;
     private String body;
+    private String img;
 
     public NewsEntity() {
 
