@@ -36,6 +36,6 @@ public class UserEntity {
         this.login = login;
         this.email = email;
         this.password = password;
-        this.addressList = new ArrayList<>();
+        this.addressList = new ArrayList<AddressEntity>();
     }
 }

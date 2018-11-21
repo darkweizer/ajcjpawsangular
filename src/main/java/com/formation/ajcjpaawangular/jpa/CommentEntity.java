@@ -10,7 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Comment {
+public class CommentEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,13 +21,13 @@ public class Comment {
 	
 	@ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
 	@JoinColumn(name = "comment_idUser")
-	private User user;
+	private UserEntity user;
 
-	public Comment() {
+	public CommentEntity() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Comment(String libelle, String body) {
+	public CommentEntity(String libelle, String body) {
 		super();
 		this.libelle = libelle;
 		this.body = body;
@@ -58,11 +58,11 @@ public class Comment {
 	}
 
 	
-	public User getUser() {
+	public UserEntity getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(UserEntity user) {
 		this.user = user;
 	}
 

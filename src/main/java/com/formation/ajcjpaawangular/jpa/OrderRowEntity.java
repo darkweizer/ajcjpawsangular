@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class OrderRow {
+public class OrderRowEntity {
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		@Column(nullable = false)
@@ -15,11 +15,11 @@ public class OrderRow {
 		private  Integer idOrderRow;
 		private int quantie;
 		private double total;
-		public OrderRow() {
+		public OrderRowEntity() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
-		public OrderRow(int quantie, double total) {
+		public OrderRowEntity(int quantie, double total) {
 			super();
 			this.quantie = quantie;
 			this.total = total;
