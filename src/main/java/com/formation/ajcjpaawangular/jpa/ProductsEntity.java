@@ -24,4 +24,8 @@ public class ProductsEntity {
 
     @OneToMany(mappedBy = "product")
     private List<OrderRowEntity> ordersRowList;
+
+    @ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
+    @JoinTable(name = "products_familymealID")
+    private FamilyMealEntity familyMealEntity;
 }

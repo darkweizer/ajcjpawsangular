@@ -23,6 +23,7 @@
         <mapping class="com.formation.ajcjpaawangular.jpa.AddressEntity"/>
         <mapping class="com.formation.ajcjpaawangular.jpa.NewsEntity"/>
         <mapping class="com.formation.ajcjpaawangular.jpa.CommentEntity"/>
+        <mapping class="com.formation.ajcjpaawangular.jpa.FamilyMealEntity"/>
         <mapping class="com.formation.ajcjpaawangular.jpa.OrderRowEntity"/>
         <mapping class="com.formation.ajcjpaawangular.jpa.OrdersEntity"/>
         <mapping class="com.formation.ajcjpaawangular.jpa.ProductsEntity"/>
