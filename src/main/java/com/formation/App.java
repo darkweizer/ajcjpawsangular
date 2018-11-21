@@ -1,8 +1,11 @@
 package com.formation;
 
-import com.formation.ajcjpaawangular.utils.HibernateUtils;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import com.formation.ajcjpaawangular.controller.HomeController;
+import com.formation.ajcjpaawangular.jpa.NewsEntity;
+import com.formation.ajcjpaawangular.utils.HibernateUtils;
 
 public class App {
 
@@ -15,16 +18,20 @@ public class App {
 
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-
         s = HibernateUtils.getSession();
         tx = s.beginTransaction();
         testCreate();
+        HomeController.printNews(s);
+    	// Save data
+    	
+    	tx.commit();
+
     }
 
     private static void testCreate() {
-
+    	NewsEntity myNews = new NewsEntity("title", "body"); 
         // Persistante objects created
+    	s.persist(myNews);
 
     }
 
