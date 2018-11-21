@@ -12,7 +12,6 @@ public class OrderRowEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
-
     private Integer id;
     private Integer quantie;
     private Double total;
