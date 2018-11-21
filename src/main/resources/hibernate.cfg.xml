@@ -20,6 +20,7 @@
         <property name="use_sql_comments">true</property>
 
         <!-- Fichiers à mapper -->
-        <mapping class="com.formation.ajcjpaawangular.jpa." /> <!-- TODO : -->
+        <mapping class="com.formation.ajcjpaawangular.jpa.AddressEntity"/>
+        <mapping class="com.formation.ajcjpaawangular.jpa.UserEntity"/>
     </session-factory>
 </hibernate-configuration>
