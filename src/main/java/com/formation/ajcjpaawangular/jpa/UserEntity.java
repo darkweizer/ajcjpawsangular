@@ -30,10 +30,10 @@ public class UserEntity {
     private List<AddressEntity> addressList;
 
     @OneToMany(mappedBy="user")
-    private List<Comment> commentList;
+    private List<CommentEntity> commentList;
 
     @OneToMany(mappedBy="user")
-    private List<OrderHeader> orderList;
+    private List<OrdersEntity> orderList;
 
     public UserEntity() {
 

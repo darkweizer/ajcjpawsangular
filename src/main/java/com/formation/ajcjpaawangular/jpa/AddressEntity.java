@@ -17,9 +17,7 @@ public class AddressEntity {
     private String zipCode;
     private String city;
 
-    @ManyToOne(
-            cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH}
-    )
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name="address_userID")
     private UserEntity user;
 
