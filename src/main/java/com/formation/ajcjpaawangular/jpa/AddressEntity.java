@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
+@Table(name = "address")
 public class AddressEntity {
 
     @Id
@@ -31,5 +32,10 @@ public class AddressEntity {
         this.street 	= street;
         this.zipCode 	= zipCode;
         this.city		= city;
+    }
+
+    @Override
+    public String toString() {
+        return "Adress [idAdress=" + id + ", street=" + street + ", zipcode=" + zipCode + "]";
     }
 }

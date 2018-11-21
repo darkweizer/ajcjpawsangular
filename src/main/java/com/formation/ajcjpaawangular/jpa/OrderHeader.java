@@ -1,5 +1,7 @@
 package com.formation.ajcjpaawangular.jpa;
 
+import lombok.Data;
+
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -10,6 +12,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
+@Data
 @Entity
 public class OrderHeader {
 	@Id
@@ -21,7 +25,7 @@ private Date date;
 private Double price;
 @ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
 @JoinColumn(name = "order_idUser")
-private User user;
+private UserEntity user;
 
 public OrderHeader() {
 	// TODO Auto-generated constructor stub
@@ -40,48 +44,6 @@ public OrderHeader(String type, Date date, Double price) {
 	this.type = type;
 	this.date = date;
 	this.price = price;
-}
-
-
-
-public Integer getIdOrder() {
-	return idOrder;
-}
-
-public void setIdOrder(Integer idOrder) {
-	this.idOrder = idOrder;
-}
-
-public String getType() {
-	return type;
-}
-
-public void setType(String type) {
-	this.type = type;
-}
-
-public Date getDate() {
-	return date;
-}
-
-public void setDate(Date date) {
-	this.date = date;
-}
-
-public Double getPrice() {
-	return price;
-}
-
-public void setPrice(Double price) {
-	this.price = price;
-}
-
-public User getUser() {
-	return user;
-}
-
-public void setUser(User user) {
-	this.user = user;
 }
 
 @Override
