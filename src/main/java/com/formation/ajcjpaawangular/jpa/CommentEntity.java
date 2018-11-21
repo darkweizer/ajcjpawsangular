@@ -20,6 +20,10 @@ public class CommentEntity {
 	@JoinColumn(name = "comment_idUser")
 	private UserEntity user;
 
+    @ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
+    @JoinTable(name = "products_commentID")
+    private ProductsEntity product;
+
 	public CommentEntity() {
 
 	}

@@ -16,6 +16,10 @@ public class OrderRowEntity {
     private Integer quantie;
     private Double total;
 
+    @ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
+    @JoinTable(name = "products_orderrowID")
+    private ProductsEntity product;
+
     public OrderRowEntity() {
 
     }
