@@ -27,6 +27,7 @@
         <mapping class="com.formation.ajcjpaawangular.jpa.OrderRowEntity"/>
         <mapping class="com.formation.ajcjpaawangular.jpa.OrdersEntity"/>
         <mapping class="com.formation.ajcjpaawangular.jpa.ProductsEntity"/>
+        <mapping class="com.formation.ajcjpaawangular.jpa.TypeMealEntity"/>
         <mapping class="com.formation.ajcjpaawangular.jpa.UserEntity"/>
     </session-factory>
 </hibernate-configuration>
