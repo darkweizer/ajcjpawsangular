@@ -14,6 +14,7 @@ public class ProductsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     private Integer id;
+    private String libelle;
     private String img;
     private Double price;
     private String dispo;
@@ -42,8 +43,9 @@ public class ProductsEntity {
     public ProductsEntity() {
     }
 
-    public ProductsEntity(String img, Double price, String dispo, Integer stock, List<CommentEntity> commentList, List<OrderRowEntity> ordersRowList, List<TypeMealEntity> typeMealList, FamilyMealEntity familyMealEntity) {
-        this.img = img;
+    public ProductsEntity(String libelle,String img, Double price, String dispo, Integer stock, List<CommentEntity> commentList, List<OrderRowEntity> ordersRowList, List<TypeMealEntity> typeMealList, FamilyMealEntity familyMealEntity) {
+    	this.libelle = libelle;
+    	this.img = img;
         this.price = price;
         this.dispo = dispo;
         this.stock = stock;
@@ -52,4 +54,15 @@ public class ProductsEntity {
         this.typeMealList = typeMealList;
         this.familyMealEntity = familyMealEntity;
     }
+
+	public ProductsEntity(Integer id, String libelle, String img, Double price, String dispo, Integer stock) {
+		this.id = id;
+		this.libelle = libelle;
+		this.img = img;
+		this.price = price;
+		this.dispo = dispo;
+		this.stock = stock;
+	}
+    
+	
 }
